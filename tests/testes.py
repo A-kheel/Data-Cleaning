@@ -11,8 +11,7 @@ def test_load_data():
         assert list(acc.columns) == ["time", "seconds_elapsed","acc_z", "acc_y", "acc_x"]
         assert list(gyr.columns) == ["time", "seconds_elapsed", "gyr_z", "gyr_y", "gyr_x"]
         assert list(grav.columns) == ["time", "seconds_elapsed", "grav_z", "grav_y", "grav_x"]
-
-print("good")   
+   
 
 
 #for pangdatamerge
@@ -50,6 +49,7 @@ def test_merge_sensor_data():
     assert len(result.columns) == 11
     assert len(result) == 3
     assert result.isna().sum().sum() == 0
+
 
 
 
